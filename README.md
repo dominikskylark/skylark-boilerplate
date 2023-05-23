@@ -2,33 +2,42 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+Components - individual, reusable items that can be used to build blocks or imported directly into a different component. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Blocks - rows within a page made up of series of components and dynamic database using static props to style them and personalise their behaviour
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+// As a good practice, we should be able to set global props for the whole site - for example, text alignment
+// list of classes set by the designers, each project should have a minimum of primary, secondary and an alternative button. Be mindful of dark and light theme
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Example:
+Call to action block
+- heading: plain text
+- block of text / body: rich text
+- call to action button: label, value, icon
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Blocks global props:
+- contained / full width
+- content alignment (left, right, centre)
+- vertical aligment (top, bottom, middle)
 
-## Learn More
+Heading component props:
+- heading tag: h1 - h6
+- transform: none, uppercase, lowercase, sentence case
+- alignment override: left, right, centre
+- colour override (css override): css variable
+- font-family override: font name
 
-To learn more about Next.js, take a look at the following resources:
+Body component props:
+- transform: none, uppercase, lowercase, sentence case
+- alignment override: left, right, centre
+- colour override (css override): css variable
+- font-family override: font name
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+CTA component props:
+- button style: [css classes] 
+- text colour override: css variable
+- bg colour override: css variable
+- alignment override: inherit, right, left, centre
+- icon flex: true or false (whether it's stacked or next to each other)
+- icon location: before, after
+# skylark-boilerplate
